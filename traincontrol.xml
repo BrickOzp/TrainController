@@ -1,0 +1,30 @@
+<devices>
+    <train name="Train">
+        <sbrick address="00:01:02:03:04:05">
+            <channel id="0" service="motor" inverted="true"/>
+            <channel id="3" service="motor"/>
+            <channel id="1" service="light"/>
+        </sbrick>
+        <event class_name="example.ExampleEvent"/>
+    </train>
+    <devicegroup name="Devicegroup">
+        <sbrick address="00:01:02:03:04:06">
+            <channel id="1" service="motor" name="Device name"/>
+            <channel id="3" inverted="true" service="motor" name="Device name 2" event="example.exampleEvent"/>
+        </sbrick>
+    </devicegroup>
+    <switchgroup name="Switchgroup">
+        <pfxbrick address="00:01:02:03:04:07">
+	    <channel id="2" service="switch" direction="left" name="Switch name" inverted="true"/>
+            <channel id="1" service="switch" direction="right" name="Switch name 2"/>
+        </pfxbrick>
+   </switchgroup>
+   <gpio>
+     <reed id="reed1" pin="7"/>
+     <reed id="reed2" pin="16"/>
+     <reed id="reed3" pin="11"/>
+     <reed id="reed4" pin="18"/>
+     <reed id="reed5" pin="22"/>
+     <reed id="reed6" pin="32"/>
+   </gpio>
+</devices>
