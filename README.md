@@ -1,4 +1,4 @@
-#Train Controller
+# Train Controller
 
 This is an application designed for controlling LEGO trains, equipped with SBrick or PfxBrick, from a Raspberry pi.
 
