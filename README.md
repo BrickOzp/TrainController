@@ -1,4 +1,4 @@
-Train Controller
+#Train Controller
 
 This is an application designed for controlling LEGO trains, equipped with SBrick or PfxBrick, from a Raspberry pi.
 
@@ -18,5 +18,11 @@ $ pip install bluepy
 ```
 
 ## Usage
-```python traincontrol.py
+```bash
+$ python traincontrol.py
+```
+
+### How to find the bluetooth address
+```bash
+$ sudo hcitool lescan
 ```
