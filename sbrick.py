@@ -114,7 +114,7 @@ class SBrick(BLEBrick):
       print("Will limit values to 0..FE as FF doesn't work")
       self.handle = 0x0025
     elif (self.SBRICK_FW_VS >= 4.2 and self.SBRICK_FW_VS < 5) or \
-        int(self.SBRICK_FW_VS == 5) or int(self.SBRICK_FW_VS == 11):
+        int(self.SBRICK_FW_VS) == 5 or int(self.SBRICK_FW_VS) == 11:
       print("Will use bt_address firmware 4.2+ handles")
       self.handle = 0x001A
     else:
