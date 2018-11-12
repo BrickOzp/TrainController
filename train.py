@@ -462,6 +462,11 @@ class Train:
     def setSpeed(self, speed, useSmoothStart):
         self.speed.set(speed)
 
+        if not self.enabled.get() or self.speed.get() > 0:
+            self.directionBtn.config(state='disabled')
+        else:
+            self.directionBtn.config(state='normal')
+
         for motor in self.motors:
             motor.setSpeed(speed, useSmoothStart)
 
